@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
-@RequestMapping("apple")
+@RequestMapping("apples")
 public class AppleController {
 
     @GetMapping("{color}")
@@ -29,6 +31,11 @@ public class AppleController {
         }
 
         return apple;
+    }
+
+    @GetMapping(value = "{date}",params = "date")
+    public String getApplesByDate(@PathVariable("date") Date date){
+        return " Apples after date: " + date;
     }
 
 }

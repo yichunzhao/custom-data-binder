@@ -17,7 +17,7 @@ public class StringToEmployeeConverterFactory implements ConverterFactory<String
     }
 
     @AllArgsConstructor
-    private static class StringToEmployeeConverter<T extends Employee> implements Converter<String, T> {
+    private class StringToEmployeeConverter<T extends Employee> implements Converter<String, T> {
         private Class<T> targetType;
 
         @Override

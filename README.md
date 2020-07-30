@@ -10,4 +10,8 @@ Spring mvc may carry out simple object binding, like String, Numbers etc, but it
 Instead of a list of individual converters, it may use a ConverterFactory to centralize the conversion logic for an entire class hierarchy
 (for example, converting from string to Enum)
 
+## Binding to domain model
+
+Uisng handler method argument resolver to bind data stored in header, session, or cookie to a domain model.
+
 

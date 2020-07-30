@@ -33,9 +33,14 @@ public class AppleController {
         return apple;
     }
 
-    @GetMapping(value = "{date}",params = "date")
-    public String getApplesByDate(@PathVariable("date") Date date){
+    @GetMapping(value = "{date}", params = "date")
+    public String getApplesByDate(@PathVariable("date") Date date) {
         return " Apples after date: " + date;
+    }
+
+    @GetMapping(value = "{number}", params = "num")
+    public String getAppleByNumber(@PathVariable("number") Integer numOfApple) {
+        return " Apple number: " + numOfApple;
     }
 
 }

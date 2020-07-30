@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class StringToEnum implements Converter<String, Color> {
+
     @Override
     public Color convert(String color) {
         return Color.valueOf(color.toUpperCase());

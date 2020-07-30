@@ -1,6 +1,7 @@
 package com.ynz.springdemo.customdatabinder.config;
 
 import com.ynz.springdemo.customdatabinder.converter.StringToDate;
+import com.ynz.springdemo.customdatabinder.converter.StringToEmployeeConverterFactory;
 import com.ynz.springdemo.customdatabinder.converter.StringToEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
@@ -13,11 +14,13 @@ public class AppConfig extends WebMvcConfigurationSupport {
 
     private final StringToEnum enumToString;
     private final StringToDate stringToDate;
+    private final StringToEmployeeConverterFactory stringToEmployeeConverterFactory;
 
     @Override
     protected void addFormatters(FormatterRegistry registry) {
         registry.addConverter(enumToString);
         registry.addConverter(stringToDate);
+        registry.addConverterFactory(stringToEmployeeConverterFactory);
     }
 
 }

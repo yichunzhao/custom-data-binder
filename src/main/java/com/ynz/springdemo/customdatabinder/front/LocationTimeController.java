@@ -14,4 +14,5 @@ public class LocationTimeController {
     public LocationTime getLocationTimeFromHeader(@HeadLocation LocationTime locationTime){
         return locationTime;
     }
+
 }

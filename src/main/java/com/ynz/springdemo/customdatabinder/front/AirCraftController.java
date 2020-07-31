@@ -28,7 +28,6 @@ public class AirCraftController {
 
     @GetMapping("fighter/{type}")
     public String getHeaderVersion(@RequestHeader("version") String version, @PathVariable("type") String type) {
-
         return fighters.stream().filter(s -> s.equalsIgnoreCase(type))
                 .map(s -> s.concat(version)).findFirst().orElse("not found");
     }
@@ -37,6 +36,5 @@ public class AirCraftController {
     public String getSessionIdFromCookie(@CookieValue("JSESSIONID") String sessionId){
         return sessionId;
     }
-
 
 }

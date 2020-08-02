@@ -3,11 +3,7 @@ package com.ynz.springdemo.customdatabinder.front;
 import com.ynz.springdemo.customdatabinder.domain.Developer;
 import com.ynz.springdemo.customdatabinder.domain.Manager;
 import com.ynz.springdemo.customdatabinder.domain.Name;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.WebRequest;
 
 import javax.servlet.ServletRequest;

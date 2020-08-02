@@ -12,4 +12,13 @@ public class Developer extends Employee {
         super(id);
     }
 
+    @Override
+    public long getId() {
+        return super.getId();
+    }
+
+    @Override
+    public void setId(long id) {
+        super.setId(id);
+    }
 }

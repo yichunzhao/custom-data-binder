@@ -14,4 +14,10 @@ Instead of a list of individual converters, it may use a ConverterFactory to cen
 
 Uisng handler method argument resolver to bind data stored in header, session, or cookie to a domain model.
 
+## Binding http request parameters into a model 
+
+Http request parameters can be directly bound to a domain model, or a form backing bean, using @ModelAttribute. 
+
+@ModelAttribute and Type Conversion together may binding request parameters with a complex domain model.
+
 
